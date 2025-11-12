@@ -1,0 +1,33 @@
+<h1>Lista de Reservas</h1>
+
+// feito pelo chat gpt, place holder
+
+
+<a href="/reserva/cadastrar">Nova reserva</a>
+<table border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cliente</th>
+      <th>Mesa</th>
+      <th>Data</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each reservas}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{cliente}}</td>
+      <td>{{mesa}}</td>
+      <td>{{data_reserva}}</td>
+      <td>
+        <form action="/reserva/{{id}}/deletar" method="POST" style="display:inline;">
+          <button type="submit">Deletar</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/">Voltar</a>
