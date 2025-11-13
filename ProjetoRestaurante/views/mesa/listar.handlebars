@@ -1,0 +1,32 @@
+<h1>Lista de Mesas</h1>
+
+// feito pelo chat gpt, place holder
+
+
+<a href="/mesa/cadastrar">Cadastrar nova mesa</a>
+<table border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Número</th>
+      <th>Lugares</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each mesas}}
+    <tr>
+      <td>{{id}}</td>
+      <td>{{numero}}</td>
+      <td>{{lugares}}</td>
+      <td>
+        <a href="/mesa/{{id}}/editar">Editar</a>
+        <form action="/mesa/{{id}}/deletar" method="POST" style="display:inline;">
+          <button type="submit">Deletar</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<a href="/">Voltar</a>

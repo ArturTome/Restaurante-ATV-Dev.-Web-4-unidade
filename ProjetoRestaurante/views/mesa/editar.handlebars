@@ -1,0 +1,13 @@
+<h1>Editar Mesa</h1>
+
+<form action="/mesa/{{mesa.id}}/editar" method="POST">
+  <label>Número:</label>
+  <input type="number" name="numero" value="{{mesa.numero}}" required><br>
+
+  <label>Lugares:</label>
+  <input type="number" name="lugares" value="{{mesa.lugares}}" required><br>
+
+  <button type="submit">Salvar Alterações</button>
+</form>
+
+<a href="/mesa">Voltar</a>
