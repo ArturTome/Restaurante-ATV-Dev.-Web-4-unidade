@@ -23,13 +23,15 @@ db.serialize(() => {
   )`);
 
   db.run(`CREATE TABLE IF NOT EXISTS reservas (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    cliente_id INTEGER,
-    mesa_id INTEGER,
-    data_reserva TEXT,
-    FOREIGN KEY(cliente_id) REFERENCES clientes(id),
-    FOREIGN KEY(mesa_id) REFERENCES mesas(id)
-  )`);
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  cliente_id INTEGER,
+  mesa_id INTEGER,
+  data_reserva TEXT,
+  hora_reserva TEXT,
+  FOREIGN KEY(cliente_id) REFERENCES clientes(id),
+  FOREIGN KEY(mesa_id) REFERENCES mesas(id)
+)`);
 });
 
 module.exports = db;
+
