@@ -159,10 +159,11 @@ app.get('/reserva/cadastrar', (req, res) => {
 });
 
 app.post('/reserva/cadastrar', (req, res) => {
-  const { cliente_id, mesa_id, data_reserva } = req.body;
-  db.run(
-    'INSERT INTO reservas (cliente_id, mesa_id, data_reserva) VALUES (?, ?, ?)',
-    [cliente_id, mesa_id, data_reserva],
+  const { cliente_id, mesa_id, data_reserva, hora_reserva } = req.body;
+
+db.run(
+  'INSERT INTO reservas (cliente_id, mesa_id, data_reserva, hora_reserva) VALUES (?, ?, ?, ?)',
+  [cliente_id, mesa_id, data_reserva, hora_reserva],
     (err) => {
       if (err) return res.status(500).send('Erro ao cadastrar reserva');
       res.redirect('/reserva');
@@ -181,3 +182,4 @@ app.post('/reserva/:id/deletar', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor em execução: http://localhost:${port}`);
 });
+
