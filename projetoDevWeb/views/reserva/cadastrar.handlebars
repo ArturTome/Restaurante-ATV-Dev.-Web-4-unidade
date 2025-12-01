@@ -1,0 +1,23 @@
+<h2>Cadastrar Reserva</h2>
+
+<form method="POST" action="/reserva/cadastrar">
+
+    <label>Cliente</label>
+    <select name="cliente_id">
+        {{#each clientes}}
+        <option value="{{id}}">{{nome}}</option>
+        {{/each}}
+    </select>
+
+    <label>Mesa</label>
+    <select name="mesa_id">
+        {{#each mesas}}
+        <option value="{{id}}">Mesa {{numero}}</option>
+        {{/each}}
+    </select>
+
+    <label>Data e Hora</label>
+    <input type="datetime-local" name="data_hora">
+
+    <button type="submit">Salvar</button>
+</form>

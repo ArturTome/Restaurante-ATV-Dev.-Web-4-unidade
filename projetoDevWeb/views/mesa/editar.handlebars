@@ -1,0 +1,11 @@
+<h2>Editar Mesa</h2>
+
+<form method="POST" action="/mesa/editar/{{mesa.id}}">
+    <label>Número da Mesa</label>
+    <input type="number" name="numero" value="{{mesa.numero}}" placeholder="Número da mesa">
+
+    <label>Capacidade</label>
+    <input type="number" name="capacidade" value="{{mesa.capacidade}}" placeholder="Capacidade (pessoas)">
+
+    <button type="submit">Salvar Alterações</button>
+</form>

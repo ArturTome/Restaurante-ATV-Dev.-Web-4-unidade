@@ -1,0 +1,28 @@
+<h2>Lista de Reservas</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Mesa</th>
+            <th>Data/Hora</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each reservas}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{cliente_nome}}</td>
+            <td>Mesa {{mesa_numero}}</td>
+            <td>{{data_hora}}</td>
+            <td>
+                <a class="btn" href="/reserva/editar/{{id}}">Editar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<a class="btn" href="/reserva/cadastrar">Cadastrar Reserva</a>

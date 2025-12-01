@@ -1,0 +1,102 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    padding-bottom: 30px;
+}
+
+/* HEADER */
+header {
+    background: #4c6ef5;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENT */
+main {
+    padding: 25px;
+}
+
+/* TITLES */
+h1, h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #eee;
+}
+
+/* BUTTONS */
+.btn, button {
+    display: inline-block;
+    background: #4c6ef5;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover, button:hover {
+    background: #3b5bdb;
+}
+
+/* FORMS */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+/* PLACEHOLDERS */
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}

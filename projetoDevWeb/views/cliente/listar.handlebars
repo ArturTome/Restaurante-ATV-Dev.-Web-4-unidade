@@ -1,0 +1,27 @@
+<h2>Lista de Clientes</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each clientes}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nome}}</td>
+            <td>{{telefone}}</td>
+            <td>
+                <a class="btn" href="/cliente/detalhar/{{id}}">Detalhar</a>
+                <a class="btn" href="/cliente/editar/{{id}}">Editar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<a class="btn" href="/cliente/cadastrar">Cadastrar Cliente</a>
