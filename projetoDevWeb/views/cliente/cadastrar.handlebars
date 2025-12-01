@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro do cliente</title>
+  <link rel="stylesheet" href="/css/cadastrarCliente.css">
+</head>
+<body>
+     <nav class="navegation">
+      
+      <a href="/">Home</a>
+      <a href="/desenvolvedores">Desenvolvedores</a>
+      <a href="https://github.com/ArturTome/Restaurante-ATV-Dev.-Web-4-unidade">Projeto</a>
+     </nav>
+
+  <h1>Cadastrar Cliente</h1>
+<form action="/cliente/cadastrar" method="POST">
+  <label>Nome:</label>
+  <input type="text" name="nome" required><br>
+  
+  <label>Telefone:</label>
+  <input type="text" name="telefone"><br>
+  
+  <label>Email:</label>
+  <input type="email" name="email"><br>
+
+  <button type="submit" class="submit">Cadastrar</button>
+</form>
+
+<a href="/cliente" class="voltar">❮ Clientes</a>
+
+
+</body>
+</html>
+

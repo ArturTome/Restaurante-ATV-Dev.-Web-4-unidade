@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastramento de Reservas</title>
+  <link rel="stylesheet" href="/css/cadastrarCliente.css">
+</head>
+<body>
+  <h1>Cadastrar Reserva</h1>
+  <nav class="navegation">
+      
+    <a href="/">Home</a>
+    <a href="/desenvolvedores">Desenvolvedores</a>
+    <a href="https://github.com/ArturTome/Restaurante-ATV-Dev.-Web-4-unidade">Projeto</a>
+  </nav>
+
+<form action="/reserva/cadastrar" method="POST">
+  <label>Cliente:</label>
+  <select name="cliente_id" required>
+    {{#each clientes}}
+    <option value="{{id}}">{{nome}}</option>
+    {{/each}}
+  </select><br>
+
+  <label>Mesa:</label>
+  <select name="mesa_id" required>
+    {{#each mesas}}
+    <option value="{{id}}">Mesa {{numero}} ({{lugares}} lugares)</option>
+    {{/each}}
+  </select><br>
+
+  <label>Data da Reserva:</label>
+  <input type="datetime-local" name="data_reserva" required><br>
+
+  <button type="submit" class="submit">Cadastrar</button>
+</form>
+
+<a href="/reserva"  class="voltar">Voltar</a>
+
+
+</body>
+</html>
+
+

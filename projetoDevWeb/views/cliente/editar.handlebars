@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar dados do cliente</title>
+  <link rel="stylesheet" href="/css/editarCliente.css">
+</head>
+<body>
+  <h1>Editar Cliente</h1>
+
+
+     <nav class="navegation">
+      
+      <a href="/">Home</a>
+      <a href="/desenvolvedores">Desenvolvedores</a>
+      <a href="https://github.com/ArturTome/Restaurante-ATV-Dev.-Web-4-unidade">Projeto</a>
+     </nav>
+
+<form action="/cliente/{{cliente.id}}/editar" method="POST">
+  <label>Nome:</label>
+  <input type="text" name="nome" value="{{cliente.nome}}" required><br>
+
+  <label>Telefone:</label>
+  <input type="text" name="telefone" value="{{cliente.telefone}}"><br>
+
+  <label>Email:</label>
+  <input type="email" name="email" value="{{cliente.email}}"><br>
+
+  <button type="submit" class="submit">Salvar</button>
+</form>
+
+<a href="/cliente" class="voltar">Voltar</a>
+</body>
+</html>
+
+

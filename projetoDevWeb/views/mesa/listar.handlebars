@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listagem das mesas</title>
+  <link rel="stylesheet" href="/css/ListarCliente.css">
+</head>
+<body>
+  <h1>Lista de Mesas</h1>
+
+    <nav class="navegation">
+      
+      <a href="/">Home</a>
+      <a href="/desenvolvedores">Desenvolvedores</a>
+      <a href="https://github.com/ArturTome/Restaurante-ATV-Dev.-Web-4-unidade">Projeto</a>
+     </nav>
+
+
+<a href="/mesa/cadastrar" class="cadastrar">Cadastrar nova mesa</a>
+ <div class="tabela">
+<table border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th>Número</th>
+      <th>Lugares</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody class="corpo">
+    {{#each mesas}}
+    <tr>
+      <td>{{numero}}</td>
+      <td>{{lugares}}</td>
+      <td>
+        <a href="/mesa/{{id}}/editar"><button class="editar">Editar</button></a>
+        <form action="/mesa/{{id}}/deletar" method="POST" style="display:inline;">
+          <button type="submit" class="sdeletar" id="deletar">Deletar</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+<a href="/" class="voltar">❮ Voltar</a>
+
+<script>
+  let deletarBt = document.querySelectorAll(".sdeletar");
+    deletarBt.forEach(botao =>{
+      botao.addEventListener("click", function (e){
+        if(!confirm("Tem certeza que quer deletar essa mesa?")){
+          e.preventDefault();
+        }
+      });
+    });
+</script>
+</body>
+</html>
+
+
+

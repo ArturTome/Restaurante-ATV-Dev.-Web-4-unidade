@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastramento das mesas</title>
+  <link rel="stylesheet" href="/css/cadastrarCliente.css">
+</head>
+<body>
+
+  <h1>Cadastrar Mesa</h1>
+     <nav class="navegation">
+      
+      <a href="/">Home</a>
+      <a href="/desenvolvedores">Desenvolvedores</a>
+      <a href="https://github.com/ArturTome/Restaurante-ATV-Dev.-Web-4-unidade">Projeto</a>
+     </nav>
+
+<form action="/mesa/cadastrar" method="POST">
+  <label>Número:</label>
+  <input type="number" name="numero" required ><br>
+
+  <label>Lugares:</label>
+  <input type="number" name="lugares" required><br>
+
+  <button type="submit" class="submit">Cadastrar</button>
+</form>
+
+<a href="/mesa" class="voltar">❮ Voltar</a>
+
+
+</body>
+</html>
+
+

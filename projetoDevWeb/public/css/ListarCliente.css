@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@400;700&display=swap');
+
+body{
+    background-color:#1a1110;
+    
+}
+.tabela{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 40vw;
+    height: fit-content;
+    box-sizing: border-box;
+    border: 2px solid sienna;
+
+}
+.tabela table{
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+
+h1{
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(222, 222, 236), rgb(203, 187, 187), rgb(209, 223, 255) );
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    font-family: "Playwrite CU", cursive;
+}
+
+        
+
+th{
+    width: 30vw;
+}
+
+td{
+    background-color: white;
+    text-align: center;
+}
+
+td a{
+    color: lightslategray;
+    text-decoration: none;
+}
+.editar{
+    color: royalblue;
+    border-radius: 30px;
+    box-shadow:rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+    cursor: pointer;
+}
+.sdeletar{
+    background-color: white;
+    color: crimson;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+    cursor: pointer;
+}
+
+thead{
+
+background-color: lightsteelblue;
+}
+.voltar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 8%;
+    left: 2%;
+    font-family: monospace;
+    background-color: white;
+    font-size: 20px;
+    width: 8vw;
+    height: 7vh;
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    color: burlywood;
+    text-decoration: none;
+    background-color:#3B2A27;
+    transition: 0.4s ease;
+}
+.voltar:hover{
+    background-color: #4A3A36;
+}
+
+.cadastrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 47%;
+    right: 22%;
+    font-family: monospace;
+    background-color: white;
+    font-size: 14px;
+    width: 7vw;
+    height: 5vh;
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    color: burlywood;
+    text-decoration: none;
+    background-color:#3B2A27;
+    transition: 0.4s ease;
+}
+.cadastrar:hover{
+    background-color: #4A3A36;
+}
+.navegation{
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    gap: 10px;
+    z-index: 2;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid white ;
+    border-radius: 10px;
+}
+nav>a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 10px;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+nav>a:hover{
+    transform: scale(1.1);
+    color: rgb(240, 147, 147);
+}

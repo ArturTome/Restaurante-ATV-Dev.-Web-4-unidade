@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edição de dados das mesas</title>
+  <link rel="stylesheet" href="/css/editarCliente.css">
+</head>
+<body>
+  <h1>Editar Mesa</h1>
+       <nav class="navegation">
+      
+      <a href="/">Home</a>
+      <a href="/desenvolvedores">Desenvolvedores</a>
+      <a href="https://github.com/ArturTome/Restaurante-ATV-Dev.-Web-4-unidade">Projeto</a>
+     </nav>
+  <form action="/mesa/{{mesa.id}}/editar" method="POST">
+  <label>Número:</label>
+  <input type="number" name="numero" value="{{mesa.numero}}" required><br>
+
+  <label>Lugares:</label>
+  <input type="number" name="lugares" value="{{mesa.lugares}}" required><br>
+
+  <button type="submit" class="submit">Salvar</button>
+</form>
+
+<a href="/mesa" class="voltar">❮ Voltar</a>
+</body>
+</html>
+
+
+
+
+
+
+
