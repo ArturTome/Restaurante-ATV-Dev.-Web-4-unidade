@@ -196,7 +196,7 @@ app.get('/entrada', async (req, res) => {
         res.render('entrada/listar', { entradas });
     } catch (e) {
         console.error(e);
-        res.status(500).send("Erro ao buscar clientes");
+        res.status(500).send("Erro ao buscar entradas");
     }
 });
 
@@ -218,7 +218,7 @@ app.get('/entrada/:id', async (req, res) => {
         const entrada = await Entrada.findByPk(req.params.id, { raw: true });
         if (!entrada) return res.status(404).send("Entrada não encontrado");
 
-        res.render('entrada/detalhar', { cliente });
+        res.render('entrada/detalhar', { entrada });
     } catch (e) {
         res.status(500).send("Erro ao detalhar entrada");
     }
@@ -285,7 +285,7 @@ app.get('/pratoPrincipal/:id', async (req, res) => {
         const pratosPrincipais = await pratoPrincipal.findByPk(req.params.id, { raw: true });
         if (!pratoPrincipal) return res.status(404).send("Prato Principal não encontrado");
 
-        res.render('pratoPrincipal/detalhar', { cliente });
+        res.render('pratoPrincipal/detalhar', { pratosPrincipais });
     } catch (e) {
         res.status(500).send("Erro ao detalhar Prato Principal");
     }
@@ -408,3 +408,4 @@ db.sync()
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
